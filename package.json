@@ -1,0 +1,13 @@
+{
+  "name": "typeScript",
+  "version": "1.0.0",
+  "description": "Learning Typescript by making a Blockchain with it",
+  "main": "index.js",
+  "repository": "https://github.com/ehbong/20201001_typescriptStudy",
+  "author": "ehbong hangillw86@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "prestart": "tsc"
+  }
+}
