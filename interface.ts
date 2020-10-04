@@ -62,3 +62,21 @@ let ro: ReadonlyArray<number> = a;
 a = ro as number[];
 
 // 변수는 const 프로퍼티는 readonly
+
+// 함수형 인터페이스
+interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+// 인스턴스로 함수타입 변수를 선언하고
+let mySearch: SearchFunc;
+
+// 해당 변수에 함수를 넣음 인터페이스에서 정한 매개변수와, 리턴 타입이 맞지않으면 오류
+mySearch = function (source: string, subString: string) {
+  let result = source.search(subString);
+  return result > -1;
+};
+// 타입 추론도 가능함.
+mySearch = function (src, sub) {
+  let result = src.search(sub);
+  return result > -1;
+};
